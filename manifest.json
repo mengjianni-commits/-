@@ -1,0 +1,60 @@
+﻿{
+   "background": {
+      "service_worker": "background.js"
+   },
+   "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+         "16": "/images/icon_16.png",
+         "32": "/images/icon_48.png",
+         "48": "/images/icon_48.png",
+         "128": "/images/icon_128.png"
+      }
+   },
+   "icons": {
+      "16": "/images/icon_16.png",
+      "32": "/images/icon_48.png",
+      "48": "/images/icon_48.png",
+      "128": "/images/icon_128.png"
+   },
+   "content_scripts": [
+      {
+         "css": [
+            "/css/msg.css",
+            "/libs/naranja/css/naranja.min.css",
+            "/libs/hsycmsAalert/hsycmsAlert.min.css",
+            "/libs/layui/css/layui.css"
+         ],
+         "js": [
+            "/libs/jquery-2.1.1.min.js",
+            "/libs/layui/layui.js",
+            "/libs/naranja/js/naranja.min.js",
+            "/libs/hsycmsAalert/hsycmsAlert.min.js",
+            "/libs/JSonToCSV.js",
+            "/scripts/function.js",
+            "/scripts/index.js"
+         ],
+         "matches": [
+            "https://voice.google.com/*"
+         ],
+         "run_at": "document_end",
+         "all_frames": true
+      }
+   ],
+   "description": "出售GV、TN、FB和各类打粉软件 TG：@DALGVT",
+   "web_accessible_resources": [
+      {
+         "resources": [ "/libs/layui/*" ],
+         "matches": ["\u003Call_urls>"]
+       }
+   ],
+   "manifest_version": 3,
+   "author": "PinLiu Studio",
+   "name": "Google voice自动发送",
+   "permissions": [
+      "background",
+      "storage"
+   ],
+   "host_permissions": [ "\u003Call_urls>" ],
+   "version": "1.0"
+}
